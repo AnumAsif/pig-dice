@@ -1,0 +1,52 @@
+body {
+  background-color: #e5beed;
+}
+.jumbotron {
+
+  background-color: #5b507a;
+  color:#e5beed;
+  text-align: center;
+}
+h1,h2,h3,.highlight{
+  font-family: 'Freckle Face', cursive;
+  color:#7d5c65;
+}
+p {
+  color:#7d5c65;
+  font-size: 30px;
+  font-family: 'Delius', cursive;
+}
+.btn {
+  border-style: groove;
+  border-bottom-style: solid;
+  background-color: #5b618a;
+  font-size:40px;
+}
+
+#startGame, .formDiv{
+  display:none;
+}
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* .row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+} */
+
+
+#columnOne {
+  background-color: pink;
+}
+#columnTwo {
+  background-color: #9eadc8;
+}
+
+
+#columnTwo {
+  text-align: center;
+}
+.rolledValue {
+  display: none;
+}
