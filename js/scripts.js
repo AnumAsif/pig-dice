@@ -20,14 +20,12 @@ function getPlayerName() {
 
 function playGame(player, diceValue) {
   if (diceValue == 1) {
-
     tempScore = 0;
     $(".tempScore").text(tempScore);
     $("#alert").text("Sorry!!No score for this turn!!");
     $("#pass").attr("disabled", true);
     $("#playerTurn").text("");
     return false
-
   } else {
     $("#alert").text("");
     tempScore += diceValue;
@@ -42,6 +40,7 @@ $(document).ready(function() {
 
   $("#playButton").click(function() {
     $(".gameRules").hide();
+    $("#goBackBtn").hide();
     $(".formDiv").show();
   });
 
@@ -50,11 +49,13 @@ $(document).ready(function() {
     if ($("#playerOne").val().length == 0 || $("#playerTwo").val().length == 0) {
       alert("Enter name of both players");
     } else {
-      $(".gameRules").hide()
+      $(".gameRules").hide();
       $(".formDiv").hide();
       $("#startGame").show();
+      $("#goBackBtn").show();
       player1 = new Player($("#playerOne").val(), 0);
       player2 = new Player($("#playerTwo").val(), 0);
+
       $("#playerOneName").append("<br>" + "<span>" + player1.name + "</span>");
       $("#playerTwoName").append("<br>" + "<span>" + player2.name + "</span>");
       $("#scoreOfPlayer1").append("<span>" + player1.score + "</span>");
@@ -107,5 +108,8 @@ $(document).ready(function() {
       $("#scoreOfPlayer2").text(player2.score);
       $("#playerTurn").prepend("<span>" + player1.name + ": It's your turn!!" + "</span>");
     }
+  });
+  $("#goBackBtn").click(function(){
+    location.reload();
   });
 });
