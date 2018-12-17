@@ -7,10 +7,11 @@ body {
   color:#e5beed;
   text-align: center;
 }
-h1,h2,h3,.highlight{
+h1,h2,h3{
   font-family: 'Freckle Face', cursive;
   color:#7d5c65;
 }
+
 p {
   color:#7d5c65;
   font-size: 30px;
@@ -23,30 +24,64 @@ p {
   font-size:40px;
 }
 
-#startGame, .formDiv{
+#startGame, .rolledValue, .formDiv{
   display:none;
 }
-.row.display-flex {
+
+/* .row {
   display: flex;
   flex-wrap: wrap;
+    align-items: stretch;
 }
-/* .row.display-flex > [class*='col-'] {
+.row > [class*='col-'] {
   display: flex;
   flex-direction: column;
-} */
 
+} */
+/* .row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+}
+.row > [class*='col-'] {
+  flex-grow: 1;
+} */
 
 #columnOne {
   background-color: pink;
 }
 #columnTwo {
+  /* position: relative; */
   background-color: #9eadc8;
-}
-
-
-#columnTwo {
   text-align: center;
+
+}
+.tempScore {
+
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width:300px;
+  height:30px;
+  background-color: pink;
+  border-radius: 5px;
+}
+#play, #pass{
+  /* position: absolute; */
+  font-size: 20px;
+  /*
+
+  display: inline-block; */
+  /* position: absolute; */
+  margin-top: auto;
+  margin-bottom: 0px;
 }
 .rolledValue {
   display: none;
+}
+span {
+  color:#5b618a;
+  font-family: 'Delius', cursive;
+  font-weight: bold;
 }
