@@ -38,15 +38,6 @@ p {
   flex-direction: column;
 
 } */
-/* .row{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-content: stretch;
-}
-.row > [class*='col-'] {
-  flex-grow: 1;
-} */
 
 #columnOne {
   background-color: pink;
