@@ -28,16 +28,6 @@ p {
   display:none;
 }
 
-/* .row {
-  display: flex;
-  flex-wrap: wrap;
-    align-items: stretch;
-}
-.row > [class*='col-'] {
-  display: flex;
-  flex-direction: column;
-
-} */
 
 #columnOne {
   background-color: pink;
