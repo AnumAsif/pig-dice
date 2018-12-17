@@ -7,18 +7,24 @@ This game is developed for fun. It requires two players. Each has a turn. On eac
 *Web Browser*
 ## Specifications
 ### The website:
-1. displays a form if the user decides to play this game after reading the rules 
+1. displays a form if the user decides to play this game after reading the rules: 
    - INPUT:"Play Game button pressed" 
    - OUTPUT:"A form to enter player names"
-2. displays a game board with player names after user submit the names
-   - INPUT:"Start the game button pressed" 
+2. displays a message to input  names of both users if one or both input fields are left empty:
+   - INPUT:"//no user name"
+   - OUTPUT:"Enter the name of both players"
+3. displays a game board with player names after user enter the names:
+   - INPUT:"Start the game button pressed"
    - OUTPUT:"A board displaying user name and buttons to roll the dice and pass the turn"
-3. 
-   - 
-   - 
-4. 
-   - 
-   - 
+4. displays the name of the player for each turn on board game:
+   - INPUT:"PASS button pressed"
+   - OUTPUT:"Name of the player for that turn"
+5. displays a message for no score gained if the dice rolls 1:
+   - INPUT: "Dice rolled 1"
+   - OUTPUT: "Sorry!! No score for this turn"
+6. displays a message if any one of the player's score reaches 100 and finishes the game:
+   - INPUT: Dice rolled a value"
+   - OUTPUT:"Player(name) has won!!"	
 ### Development
 Want to contribute? Great!
 
