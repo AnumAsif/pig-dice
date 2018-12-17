@@ -1,6 +1,23 @@
-function Player(name, score) {
+// ...................................................BUSINESS LOGIC
+function Player(name, score) {   //...................constructor
   this.name = name;
   this.score = score;
+}
+
+Player.prototype.playGame =  function(diceValue){//...prototype function
+  if (diceValue == 1) {
+    tempScore = 0;
+    $(".tempScore").text(tempScore);
+    $("#alert").text("Sorry!!No score for this turn!!");
+    $("#pass").attr("disabled", true);
+    $("#playerTurn").text("");
+    return false
+  } else {
+    $("#alert").text("");
+    tempScore += diceValue;
+    $(".tempScore").text(tempScore);
+    return true;
+  }
 }
 
 function diceValue() {
@@ -18,24 +35,10 @@ function getPlayerName() {
   return name;
 }
 
-function playGame(player, diceValue) {
-  if (diceValue == 1) {
-    tempScore = 0;
-    $(".tempScore").text(tempScore);
-    $("#alert").text("Sorry!!No score for this turn!!");
-    $("#pass").attr("disabled", true);
-    $("#playerTurn").text("");
-    return false
-  } else {
-    $("#alert").text("");
-    tempScore += diceValue;
-    $(".tempScore").text(tempScore);
-    return true;
-  }
-}
 var tempScore = 0;
 var player1;
 var player2;
+//................................................UI LOGIC
 $(document).ready(function() {
 
   $("#playButton").click(function() {
@@ -68,6 +71,7 @@ $(document).ready(function() {
       }
     }
   });
+
   $("#play").click(function() {
     $("#pass").attr("disabled", false);
     if (player1.score >= 100) {
@@ -80,12 +84,12 @@ $(document).ready(function() {
       var diceFaceValue = diceValue();
       diceFace(diceFaceValue);
       if (playerName == player1.name) {
-        var val = playGame(player1, diceFaceValue);
+        var val = player1.playGame(diceFaceValue);
         if (val == false) {
           $("#playerTurn").prepend("<span>" + player2.name + ": It's your turn!!" + "</span>");
         }
       } else {
-        var val = playGame(player2, diceFaceValue);
+        var val = player2.playGame(diceFaceValue);
         if (val == false) {
           $("#playerTurn").prepend("<span>" + player1.name + ": It's your turn!!" + "</span>");
         }
@@ -109,6 +113,7 @@ $(document).ready(function() {
       $("#playerTurn").prepend("<span>" + player1.name + ": It's your turn!!" + "</span>");
     }
   });
+
   $("#goBackBtn").click(function(){
     location.reload();
   });
