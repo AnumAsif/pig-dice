@@ -98,9 +98,34 @@ $(document).ready(function(){
 
     }
   }
+
 });
 
+$("#pass").click(function(){
+    var playerName = getPlayerName();
+    alert(playerName);
+    $(".tempScore").text("");
+    $("#playerTurn").text("");
+    if(playerName == player1.name){
+      player1.score += tempScore;
+      tempScore = 0;
+      $("#scoreOfPlayer1").text(player1.score);
+      $("#playerTurn").prepend("<span>"+player2.name+": It's your turn!!"+"</span>");
+    } else{
+        player2.score += tempScore;
+        tempScore = 0;
+        $("#scoreOfPlayer2").text(player2.score);
+        $("#playerTurn").prepend("<span>"+player1.name+": It's your turn!!"+"</span>");
 
+    }
+
+
+    // if($("#columnOne").height()>$("#columnTwo").height()){
+    //   $('#columnTwo').height($("#columnOne").height());
+    // }else{
+    //   $('#columnOne').height($("#columnTwo").height());
+    // }
+   });
 
 
     // if(diceFaceValue == 1){
