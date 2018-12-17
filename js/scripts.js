@@ -28,7 +28,6 @@ function playGame(player, diceValue){
     $("#alert").text("");
     tempScore+=diceValue;
     $(".tempScore").text(tempScore);
-    // player1.score=ScoreOne;
     return true;
   }
 }
@@ -116,11 +115,6 @@ $("#pass").click(function(){
     }
 
 
-    // if($("#columnOne").height()>$("#columnTwo").height()){
-    //   $('#columnTwo').height($("#columnOne").height());
-    // }else{
-    //   $('#columnOne').height($("#columnTwo").height());
-    // }
    });
 
 
