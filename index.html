@@ -49,13 +49,14 @@
         <button type="submit" class="btn" id="startTheGame">START THE GAME</button>
       </form>
     </div>
-    <div class="row display-flex" id="startGame">
+    <div class="row" id="startGame">
       <div class="col-md-4" id="columnOne">
         <div class="row" id="player1">
           <div class="col-md-12">
             <h1 id="playerOneName">PLAYER 1:</h1>
             <hr>
             <h3>SCORE:</h3>
+            <p id="scoreOfPlayer1"></p>
             <img src="" alt="" id="playerOneImg">
           </div>
         </div>
@@ -64,29 +65,36 @@
             <h1 id="playerTwoName">PLAYER 2:</h1>
             <hr>
             <h3>SCORE:</h3>
+            <p id="scoreOfPlayer2"></p>
             <img src="" alt="" id="playerTwoImg">
           </div>
         </div>
       </div>
       <div class="col-md-8" id="columnTwo">
+        <p id="playerTurn"></p>
         <div class="" id = "images">
-          <img src="images/one1.png" alt="" class="rolledValue" id="one">
-          <img src="images/two2.png" alt="" class="rolledValue" id="two">
-          <img src="images/three3.png" alt="" class="rolledValue" id="three">
-          <img src="images/four4.png" alt="" class="rolledValue" id="four">
-          <img src="images/five5.png" alt="" class="rolledValue" id="five">
-          <img src="images/six6.png" alt="" class="rolledValue" id="six">
-          <img src="images/rollDice.gif" alt="" class="rolledValue" id="rollingDice">
+          <img src="images/one1.png" alt="" class="rolledValue" id="face1">
+          <img src="images/two2.png" alt="" class="rolledValue" id="face2">
+          <img src="images/three3.png" alt="" class="rolledValue" id="face3">
+          <img src="images/four4.png" alt="" class="rolledValue" id="face4">
+          <img src="images/five5.png" alt="" class="rolledValue" id="face5">
+          <img src="images/six6.png" alt="" class="rolledValue" id="face6">
+          <img src="images/rollDice.gif" alt="" class="rolledValue" id="rollDice">
         </div>
-        <img src="images/playBtn.gif" alt="" id="playButton"/>
-        <img src="images/passTheTurn.gif" alt="" id="passButton"/>
+        <div class="tempScore">
 
+        </div>
+        <button type="button" class= "btn btn-primary" id="play">ROLL THE DICE</button>
+        <button type="button" class="btn btn-primary" id="pass">PASS THE DICE</button>
+        <!-- <img src="images/playBtn.gif" alt="" id="playButton">
+        <img src="images/passTheTurn.gif" alt="" id="passButton"> -->
+        <p id="alert"><span></span></p>
 
         </div>
       </div>
     </div>
 
-  </div>
+
 </body>
 
 </html>
