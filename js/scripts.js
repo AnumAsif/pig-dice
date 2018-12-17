@@ -71,10 +71,38 @@ $(document).ready(function(){
 
 
   });
+  $("#play").click(function(){
+  // $(".tempScore").text("");
+  $("#pass").attr("disabled",false);
+  if(player1.score >= 100){
+      $("#playerTurn").text(player1.name+" has won!!");
+  }else if(player2.score >= 100){
+      $("#playerTurn").text(player2.name+" has won!!");
+  }else{
+    var playerName = getPlayerName();
+
+    $(".rolledValue").hide();
+    var diceFaceValue = diceValue();
+    diceFace(diceFaceValue);
+
+    if(playerName == player1.name){
+      var val = playGame(player1, diceFaceValue);
+      if(val == false){
+      $("#playerTurn").prepend("<span>"+player2.name+": It's your turn!!"+"</span>");
+      }
+    }else{
+      var val =playGame(player2, diceFaceValue);
+      if (val == false){
+        $("#playerTurn").prepend("<span>"+player1.name+": It's your turn!!"+"</span>");
+      }
+
+    }
+  }
+});
 
 
 
-  
+
     // if(diceFaceValue == 1){
     //   $(".tempScore").text("");
     //   $("#scoreOfOne:first").replaceWith("<span>"+player1.score+"</span>");
