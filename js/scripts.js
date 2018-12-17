@@ -19,15 +19,11 @@ function playGame(player, diceValue){
 
     tempScore = 0;
     $(".tempScore").text(tempScore);
-    // $("#scoreOf"+player+":last").replace("<span>"+player.score+"</span>");
-    // $("#scoreOfOne").append("<br>"+"<span>"+player1.score+"</span>");
     $("#alert").text("Sorry!!No score for this turn!!");
     $("#pass").attr("disabled",true);
-  //  $("#alert").prepend("<span>"+"Sorry!!No score for this turn!!"+"</span>");
     $("#playerTurn").text("");
-
     return false
-    // $("#play").attr("disabled",true);
+
   }else{
     $("#alert").text("");
     tempScore+=diceValue;
