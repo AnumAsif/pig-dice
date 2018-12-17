@@ -94,7 +94,6 @@ $(document).ready(function() {
 
   $("#pass").click(function() {
     var playerName = getPlayerName();
-    alert(playerName);
     $(".tempScore").text("");
     $("#playerTurn").text("");
     if (playerName == player1.name) {

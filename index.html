@@ -1,98 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.3.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
-  <title>PIG DICE GAME</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Delius" rel="stylesheet">
+    <title>PIG DICE GAME</title>
+  </head>
 
-<body>
-  <div class="jumbotron">
-    <h1>PIG DICE GAME</h1>
-  </div>
-  <div class="container">
-
-    <div class="gameRules">
-      <h2>PIG DICE GAME RULES:</h2>
-      <h3>OBJECTIVES</h3>
-      <p>The objective of Pig Dice Game is to score 100 points before the opponent does.
-        The Pig Game is played with a single six sided dice.</p>
-      <h3>GAMEPLAY</h3>
-      <p>In each turn a player rolls a dice repeatedly until either 1 is rolled or
-        a player decides to hold and pass on the turn to it's opponent.</p>
-      <p>The number player rolls is added to a temporary score. If the player
-        rolls a 1, they lose their temporary score and turn is passed to their
-        opponent.</p>
-      <p>If the player gets any other number, they can decide to continue
-        and roll the dice.</p>
-      <p>If the player decides to hold, then their turn total(temporary score)
-        is added to the overall score.</p>
-      <p>The first player to score 100 points wins the game.</p>
-      <button class="btn btn-primary" id="playButton">PLAY</button>
+  <body>
+    <div class="jumbotron">
+      <h1>PIG DICE GAME</h1>
     </div>
-    <div class="formDiv">
-      <form>
-        <div class="form-group">
-          <label for="playerOne"><h1>Please Enter Player1 Name:</h1></label>
-          <input type="text" class="form-control" id="playerOne">
-        </div>
-        <div class="form-group">
-          <label for="playerTwo"><h1>Please Enter Player2 Name:</h1></label>
-          <input type="text" class="form-control" id="playerTwo">
-        </div>
-        <button type="submit" class="btn" id="startTheGame">START THE GAME</button>
-      </form>
-    </div>
-    <div class="row" id="startGame">
-      <div class="col-md-4" id="columnOne">
-        <div class="row" id="player1">
-          <div class="col-md-12">
-            <h1 id="playerOneName">PLAYER 1:</h1>
-            <hr>
-            <h3>SCORE:</h3>
-            <p id="scoreOfPlayer1"></p>
-            <img src="" alt="" id="playerOneImg">
+    <div class="container">
+      <div class="gameRules">
+        <h2>PIG DICE GAME RULES:</h2>
+        <h3>OBJECTIVES</h3>
+        <p>The objective of Pig Dice Game is to score 100 points before the opponent does.
+          The Pig Game is played with a single six sided dice.</p>
+        <h3>GAMEPLAY</h3>
+        <p>In each turn a player rolls a dice repeatedly until either 1 is rolled or
+          a player decides to hold and pass on the turn to it's opponent.</p>
+        <p>The number player rolls is added to a temporary score. If the player
+          rolls a 1, they lose their temporary score and turn is passed to their
+          opponent.</p>
+        <p>If the player gets any other number, they can decide to continue
+          and roll the dice.</p>
+        <p>If the player decides to hold, then their turn total(temporary score)
+          is added to the overall score.</p>
+        <p>The first player to score 100 points wins the game.</p>
+        <button class="btn btn-primary" id="playButton">PLAY</button>
+      </div>
+      <div class="formDiv">
+        <form>
+          <div class="form-group">
+            <label for="playerOne">
+              <h1>Please Enter Player1 Name:</h1>
+            </label>
+            <input type="text" class="form-control" id="playerOne">
+          </div>
+          <div class="form-group">
+            <label for="playerTwo">
+              <h1>Please Enter Player2 Name:</h1>
+            </label>
+            <input type="text" class="form-control" id="playerTwo">
+          </div>
+          <button type="submit" class="btn" id="startTheGame">START THE GAME</button>
+        </form>
+      </div>
+      <div class="row" id="startGame">
+        <div class="col-md-4" id="columnOne">
+          <div class="row" id="player1">
+            <div class="col-md-12">
+              <h1 id="playerOneName">PLAYER 1:</h1>
+              <hr>
+              <h3>SCORE:</h3>
+              <p id="scoreOfPlayer1"></p>
+              <img src="" alt="" id="playerOneImg">
+            </div>
+          </div>
+          <div class="row" id="player2">
+            <div class="col-md-12">
+              <h1 id="playerTwoName">PLAYER 2:</h1>
+              <hr>
+              <h3>SCORE:</h3>
+              <p id="scoreOfPlayer2"></p>
+              <img src="" alt="" id="playerTwoImg">
+            </div>
           </div>
         </div>
-        <div class="row" id="player2">
-          <div class="col-md-12">
-            <h1 id="playerTwoName">PLAYER 2:</h1>
-            <hr>
-            <h3>SCORE:</h3>
-            <p id="scoreOfPlayer2"></p>
-            <img src="" alt="" id="playerTwoImg">
+        <div class="col-md-8" id="columnTwo">
+          <p id="playerTurn"></p>
+          <div class="" id="images">
+            <img src="images/one1.png" alt="" class="rolledValue" id="face1">
+            <img src="images/two2.png" alt="" class="rolledValue" id="face2">
+            <img src="images/three3.png" alt="" class="rolledValue" id="face3">
+            <img src="images/four4.png" alt="" class="rolledValue" id="face4">
+            <img src="images/five5.png" alt="" class="rolledValue" id="face5">
+            <img src="images/six6.png" alt="" class="rolledValue" id="face6">
+            <img src="images/rollDice.gif" alt="" class="rolledValue" id="rollDice">
           </div>
-        </div>
-      </div>
-      <div class="col-md-8" id="columnTwo">
-        <p id="playerTurn"></p>
-        <div class="" id = "images">
-          <img src="images/one1.png" alt="" class="rolledValue" id="face1">
-          <img src="images/two2.png" alt="" class="rolledValue" id="face2">
-          <img src="images/three3.png" alt="" class="rolledValue" id="face3">
-          <img src="images/four4.png" alt="" class="rolledValue" id="face4">
-          <img src="images/five5.png" alt="" class="rolledValue" id="face5">
-          <img src="images/six6.png" alt="" class="rolledValue" id="face6">
-          <img src="images/rollDice.gif" alt="" class="rolledValue" id="rollDice">
-        </div>
-        <div class="tempScore">
-
-        </div>
-        <button type="button" class= "btn btn-primary" id="play">ROLL THE DICE</button>
-        <button type="button" class="btn btn-primary" id="pass">PASS THE DICE</button>
-        <p id="alert"><span></span></p>
-
+          <div class="tempScore">
+          </div>
+          <button type="button" class="btn btn-primary" id="play">ROLL THE DICE</button>
+          <button type="button" class="btn btn-primary" id="pass">PASS THE DICE</button>
+          <p id="alert"><span></span></p>
         </div>
       </div>
     </div>
-
-
-</body>
+  </body>
 
 </html>
