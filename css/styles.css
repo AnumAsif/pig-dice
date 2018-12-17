@@ -33,7 +33,6 @@ p {
   background-color: pink;
 }
 #columnTwo {
-  /* position: relative; */
   background-color: #9eadc8;
   text-align: center;
 
@@ -49,7 +48,7 @@ p {
   border-radius: 5px;
 }
 #play, #pass{
-  /* position: absolute; */
+
   font-size: 20px;
   /*
 
